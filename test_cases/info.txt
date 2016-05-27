@@ -1,0 +1,1 @@
+This folder should contain large test images that can be processed by a specific classifier. Because these image files are large, they are not included in this code repository. However, they can be downloaded from Zenodo: http://dx.doi.org/10.5281/zenodo.53169 

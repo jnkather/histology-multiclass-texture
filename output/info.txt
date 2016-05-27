@@ -1,0 +1,3 @@
+This folder contains
+- the output of the classifier training script (i.e. the final classifiers that can be used later on) -> for each experimental run, a new folder is created (with a unique ID)
+- all output images

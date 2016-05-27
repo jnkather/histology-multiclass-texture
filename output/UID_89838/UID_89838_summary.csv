@@ -1,0 +1,11 @@
+experiment,classes,samples,method,features,classifier,crossVal,enforceScale,time,accuracy
+1,2,1250,best2,43,rbfSVM,10,0,3,0.983
+2,8,5000,best2,43,rbfSVM,10,0,16,0.858
+3,2,1250,best3,49,rbfSVM,10,0,1,0.983
+4,8,5000,best3,49,rbfSVM,10,0,14,0.86
+5,2,1250,best4,69,rbfSVM,10,0,1,0.986
+6,8,5000,best4,69,rbfSVM,10,0,16,0.865
+7,2,1250,best5,74,rbfSVM,10,0,1,0.986
+8,8,5000,best5,74,rbfSVM,10,0,14,0.874
+9,2,1250,all6,80,rbfSVM,10,0,1,0.986
+10,8,5000,all6,80,rbfSVM,10,0,14,0.874
