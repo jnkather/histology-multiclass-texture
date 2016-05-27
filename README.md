@@ -2,7 +2,8 @@
 Texture analysis in colorectal cancer histology
 
 ## Raw data
-All raw data used in this study are available on Zenodo under a Creative Commons Attribution license: ([![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.53169.svg)](http://dx.doi.org/10.5281/zenodo.53169)).
+All raw data used in this study are available on Zenodo under a Creative Commons Attribution license:
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.53169.svg)](http://dx.doi.org/10.5281/zenodo.53169)
 
 ## More information
 For more information, please refer to the following article. Please cite this article when using the data set.
