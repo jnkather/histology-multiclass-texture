@@ -3,7 +3,7 @@
 ## Contents
 This repository contains MATLAB source code for the project "Texture analysis in colorectal cancer histology". Using this code, you can train a classifier with sample images of histological textures and apply this classifier to other histological images. A trained classifier is already included and can be applied to H&E images of colorectal carcinomas (20x magnification). Whereas all previously published approaches for colorectal cancer texture classification only address the two-class problem (tumor-stroma separation), this method is capable of classifying more than two tissue categories. In our paper, we investigated the classification of eight tissue categories, but the classifier can in principle handle any number of tissue categories.
 
-The general workflow is as follow:
+The general workflow is as follows:
 
 ```
 1. Use 'main_create_texture_feature_dataset.m' to create a feature vector for a given set of training images (specify the directory as 'cnst.inputDir' in 'main_create_texture_feature_dataset.m'). Then, manually change 'subroutines/load_feature_dataset.m' and specify the filename of the feature vector for further use.
