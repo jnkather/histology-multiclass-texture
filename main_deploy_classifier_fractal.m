@@ -1,9 +1,10 @@
-% created by JN Kather 2015
-% jakob.kather@medma.uni-heidelberg.de
-% license: MIT license
+% created by Jakob Nikolas Kather 2015 - 2016
+% license: see separate LICENSE file in same folder, includes disclaimer
 
 % this script is used to apply a given classifier to a large image in a
-% tile-wise manner, e.g. 150 px square tiles with 50 px overlap.
+% tile-wise manner, e.g. 150 px square tiles with 50 px overlap. It
+% contains an experimental feature (fractal classification) that is
+% deactivated by default.
 
 % HEADER
 clear all, close all, clc
@@ -15,10 +16,11 @@ addpath([pwd,'/perceptual'],'-end');         % Bianconi et al. subroutines
 % define some constants (paths, filenames and the like)
 cnst.ApplicationInputDir = './test_cases/';  % specify folder for input images
 cnst.parallel = true;              % parallel computing? 0 or 1. default 1
-cnst.outputDir = './output/';
+cnst.outputDir = './output/'; % where to save the results
+
 % set block size for largest generation of blocks
-cnst.CoreBlockSize = [50 50];   % default [50 50];
-cnst.BorderSize =    [50 50];     % default [50 50];
+cnst.CoreBlockSize = [50 50];     % default [50 50]
+cnst.BorderSize =    [50 50];     % default [50 50]
 
 % set feature set parameters
 cnst.featureType = 'best5';

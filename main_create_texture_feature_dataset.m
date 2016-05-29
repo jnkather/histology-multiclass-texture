@@ -14,10 +14,14 @@ addpath([pwd,'/lbp'],'-end'); % code for LBP, see license in subfolder
 addpath([pwd,'/perceptual'],'-end'); % code for perceptual features, see license in subfolder
 
 % define some constants (paths, filenames and the like)
-cnst.inputDir = '/Users/jakob/Dropbox/Wissenschaft-Daten/2016-TEXTURE_DATASET_FINAL/PRIMARIES_TILES_FINAL/structured_set02_corrected_PRIMARY_TILES/';  % must end with /
+
+cnst.inputDir = 'INSERT_DIRECTORY_HERE';  % Path of a directory that contains 
+% ONE FOLDER PER TISSUE CATEGORY with multiple small images per folder, 
+% e.g. 625 images with 150 * 150 px each. Path must end with /
+
 cnst.effectiveImageSize = 150*150; % default 150*150
-cnst.noOverheat =  true; % pause program after each iteration, default false
-cnst.limitedMode = true; % use only the first N images per class, default false
+cnst.noOverheat =  true; % pause program after each iteration to prevent overheat, default true
+cnst.limitedMode = false; % use only the first N images per class, default false
     cnst.limit = 625;      % if limitedMode==true, how many images?, default 625
 cnst.featureType = {'best5'}; %'best2','best3','best4','best5','all6'}; % one or more of {'histogram_lower','histogram_higher','gabor','perceptual','f-lbp','glcmRotInv','best2','best3'};  
 cnst.gaborArray = gabor(2:2:12,0:30:150); % create gabor filter bank, requires Matlab R2015b
@@ -48,7 +52,6 @@ disp(['-> in total: ', num2str(sum(TisCatImgCount)), ' files.']); % show status
 %% load all images and compute features
 source_array = double(zeros(cnst.numFeatures,sum(TisCatImgCount))); % preallocate
 target_array = uint8(zeros(size(TisCats,1),sum(TisCatImgCount)));   % preallocate
-
 
 for i = 1:size(TisCats,1) % iterate through Tissue categories (TisCats)
     tImage = tic;  % start timer

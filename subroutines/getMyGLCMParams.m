@@ -1,5 +1,5 @@
 % created by Jakob Nikolas Kather 2015 - 2016
-% license: see separate LICENSE file in same folder, includes disclaimer
+% license: see separate LICENSE file, includes disclaimer
 
 function offset = getMyGLCMParams()
 offset = [ 0 1; 0 2; 0 3; 0 4; 0 5;...

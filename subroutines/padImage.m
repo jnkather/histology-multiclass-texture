@@ -1,5 +1,5 @@
 % created by Jakob Nikolas Kather 2015 - 2016
-% license: see separate LICENSE file in same folder, includes disclaimer
+% license: see separate LICENSE file, includes disclaimer
 
 function imgOut = padImage( imgIn,finalSize,opt )
 % this functions pads and reduces an RGB input image. Reduction can be

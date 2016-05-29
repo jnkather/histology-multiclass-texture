@@ -1,5 +1,5 @@
 % created by Jakob Nikolas Kather 2015 - 2016
-% license: see separate LICENSE file in same folder, includes disclaimer
+% license: see separate LICENSE file, includes disclaimer
 
 function glcmsRed = reduceGLCM(glcms,numOffsets)
     glcmsRed = zeros(size(glcms,1),size(glcms,2),numOffsets);

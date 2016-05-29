@@ -1,5 +1,5 @@
 % created by Jakob Nikolas Kather 2015 - 2016
-% license: see separate LICENSE file in same folder, includes disclaimer
+% license: see separate LICENSE file, includes disclaimer
 
 function [trainedClassifier, validationAccuracy, ConfMat, ROCraw] = ...
     trainMyClassifier(DataIn,classNames,NcrossVal,classifMethod)
@@ -10,10 +10,7 @@ switch lower(classifMethod)
     % NOTE: the dataset could also be classified by a neural network. When 
     % using the MATLAB GUI nprtool, a well-performing neural network can be
     % easily trained and classification accuracy is very high (comparable
-    % to SVM). However, the network cannot be used by embedding the code
-    % for network training here. Reason: command-line function "patternnet"
-    % (as used in the MATLAB documentation) performs extremely poorly
-    % (classification accuracy <50%). Did not find the reason so far.
+    % to SVM). However, this has not yet been implemented here.
     
     [trainedClassifier, validationAccuracy,ConfMat, ROCraw] = ...
      trainMyNetwork(DataIn,NcrossVal);

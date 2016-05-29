@@ -16,9 +16,9 @@ cnst.scale = false;                 % scale all variables again? default false
 cnst.showResults = true;           % show confusion matrix etc? default true
 cnst.crossbar = '---';          % decoration for status report
 cnst.allClassifiers = {'1NN'}; %'1NN', 'ensembleTree', 'linSVM', 'rbfSVM'}; %{'1NN', 'ensembleTree', 'linSVM', 'rbfSVM'}; 
-cnst.allFSets = {'histogram_lower','glcm'}; %{'histogram_lower','histogram_higher','gabor','perceptual','f-lbp','glcm','best5'};  
-cnst.FeatureDataSource = 'PRIMARY';
-    cnst.reduceFeatSet = false; % works for combined_ALL only
+cnst.allFSets = {'best5'}; %{'histogram_lower','histogram_higher','gabor','perceptual','f-lbp','glcm','best5'};  
+cnst.FeatureDataSource = 'PRIMARY'; % default 'PRIMARY'
+    cnst.reduceFeatSet = false; % experimental, works for combined_ALL only
 
 % internal variables
 rng('shuffle');         % reset random number generator for random ID
@@ -63,7 +63,7 @@ if cnst.pie && ~shownPie,
 % iterate through maxClass: perform experiments with 2,3,4,... classes
 for currNumClass = [numel(maxClasses)] % first and last element [1,numel(maxClasses)]
     rng(currNumClass);  % reset random number generator for reproducibility
-    maxClass = maxClasses(currNumClass) % extract max. class
+    maxClass = maxClasses(currNumClass); % extract max. class
     source_target_limit_classes = ...
       source_and_target(1:find(source_and_target(:,end)==(maxClass), 1, 'last' ),:);
   

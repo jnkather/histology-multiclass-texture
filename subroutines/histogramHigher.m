@@ -1,5 +1,5 @@
 % created by Jakob Nikolas Kather 2015 - 2016
-% license: see separate LICENSE file in same folder, includes disclaimer
+% license: see separate LICENSE file, includes disclaimer
 
 function featureVector = histogramHigher(imgInGray)
         % input: grayscale image, values 0...1 (double precision floats)
