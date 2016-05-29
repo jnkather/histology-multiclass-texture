@@ -45,12 +45,13 @@ disp([cnst.crossbar,10,'starting iteration with ',currFSet]); countdown(5);
 [CatNames, source_and_target, myData, myLabels, myLabelCats] = ...
     load_feature_dataset(currFSet, cnst.FeatureDataSource);
 
-if cnst.reduceFeatSet && strcmp(currFSet,'combined_ALL')
-    warning('reducing feature set...');
-    load('./datasets/PRIMARY/featSetOut_combined_ALL_reduced_2016_01_24.mat');
-    source_and_target = source_and_target(:,[featSet,true]);
-    myData = myData(featSet,:);
-end
+% - this block is obsolete - 
+% if cnst.reduceFeatSet && strcmp(currFSet,'combined_ALL')
+%     warning('reducing feature set...');
+%     load('./datasets/PRIMARY/featSetOut_combined_ALL_reduced_2016_01_24.mat');
+%     source_and_target = source_and_target(:,[featSet,true]);
+%     myData = myData(featSet,:);
+% end
     
 maxClasses = 2:max(unique(source_and_target(:,end)));
 
